@@ -1,0 +1,19 @@
+# Firebase credentials — NEVER push this
+*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+# Large model files (optional — comment out if you want to include them)
+shape_predictor_68_face_landmarks.dat
+
+# UI assets (add back if you want to include them)
+Desktop2.png
+logo-color.png
+logo-color.ico
