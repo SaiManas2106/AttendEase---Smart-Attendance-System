@@ -1,17 +1,17 @@
-# 🎓 AttendEase — Face Recognition Attendance System
+# AttendEase — Face Recognition Attendance System
 
 > An intelligent, real-time attendance management system powered by facial recognition, built with Python, PyQt5, Dlib, OpenCV, and Firebase.
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
 - [About the Project](#about-the-project)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
+- [Installation and Setup](#installation-and-setup)
 - [Firebase Configuration](#firebase-configuration)
 - [Running the Application](#running-the-application)
 - [How It Works](#how-it-works)
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧠 About the Project
+## About the Project
 
 **AttendEase** is a desktop application that automates student attendance using face recognition. Instead of traditional roll-calls or manual entry, AttendEase captures student faces via webcam, identifies them using Dlib's 128D face encoding model, and records attendance directly to a Firebase Realtime Database — all in real time.
 
@@ -28,18 +28,18 @@ It features a clean, modern PyQt5 GUI with a full-screen splash screen, intuitiv
 
 ---
 
-## ✨ Features
+## Features
 
 - 📷 **Face Registration** — Captures multi-angle face samples (front, left, right, up, down) per student and stores 128D encodings in Firebase
 - 🏫 **Start Class** — Selects the subject (DBMS, OS, CS, ASN) and initializes an attendance session
 - ✅ **Mark Attendance** — Real-time webcam-based face recognition marks students present automatically
 - 📊 **Export Attendance** — Generates and exports full attendance percentage reports to CSV
 - 🖥️ **Splash Screen** — Branded startup screen with smooth transition to the main window
-- 🕐 **Live Date & Time** — Always-visible real-time clock in the UI
+- 🕐 **Live Date and Time** — Always-visible real-time clock in the UI
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -56,7 +56,7 @@ It features a clean, modern PyQt5 GUI with a full-screen splash screen, intuitiv
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AttendEase/
@@ -82,19 +82,19 @@ AttendEase/
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 Make sure the following are installed on your system:
 
 - Python 3.8 or higher
 - pip (Python package manager)
 - A working webcam
-- A Firebase project (Realtime Database enabled)
+- A Firebase project with Realtime Database enabled
 - CMake (required to build Dlib)
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation and Setup
 
 ### 1. Clone the Repository
 
@@ -124,7 +124,7 @@ pip install pyqt5 opencv-python dlib numpy firebase-admin
 > ⚠️ **Dlib Installation Note:** Dlib requires CMake and C++ build tools.
 > On Windows, install [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) before running `pip install dlib`.
 
-### 4. Download Required Model File
+### 4. Download the Required Model File
 
 Download the Dlib landmark model and place it in the project root:
 
@@ -134,7 +134,7 @@ The `dlib_face_recognition_resnet_model_v1.dat` file is already included in the 
 
 ---
 
-## 🔥 Firebase Configuration
+## Firebase Configuration
 
 1. Go to the [Firebase Console](https://console.firebase.google.com/) and create a project
 2. Enable **Realtime Database**
@@ -163,41 +163,45 @@ shape_predictor_68_face_landmarks.dat
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 ```bash
 python main.py
 ```
 
 The application will:
+
 1. Display the **splash screen** for 3 seconds
 2. Launch the **main window** in maximized mode
 3. Show the four navigation buttons: Register Student, Start Class, Mark Attendance, Export Attendance
 
 ---
 
-## 🔍 How It Works
+## How It Works
 
 ### Student Registration
+
 - Enter the student's Roll No. and Name
 - The app prompts you to position your face at 5 different angles
 - Dlib extracts 128D face encodings from each angle
 - Encodings and student data are saved to Firebase
 
 ### Taking Attendance
+
 - Select the subject for the current class
 - The webcam feed starts and detects faces in real time
 - Each detected face is compared against stored encodings using Euclidean distance
 - Matched students are marked **Present** in Firebase with a timestamp
 
 ### Exporting Attendance
+
 - Aggregates all attendance records from Firebase
 - Calculates attendance percentages per student per subject
 - Exports a clean, ready-to-use CSV report
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! To contribute:
 
@@ -209,7 +213,7 @@ Contributions are welcome! To contribute:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
